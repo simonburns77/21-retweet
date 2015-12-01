@@ -20,7 +20,7 @@ me = api.me()
 @payment.required(INFO_PRICE)
 def info():
 
-    return "\n______\n\nThis endpoint is for Twitter account %s which has %d followers.\nYou can purchase a follow from %s for %d satoshi by calling \n/follow/YOUR_TWITTER_HANDLE or a retweet for %d satoshi at /retweet/TWEET_ID.\n______\n" % (me.screen_name, me.followers_count, me.screen_name, FOLLOW_PRICE, RETWEET_PRICE)
+    return "\n______\n\nThis endpoint is for Twitter account @%s which has %d followers.\nYou can purchase a follow from @%s for %d satoshi by calling \n/follow/YOUR_TWITTER_HANDLE or a retweet for %d satoshi at /retweet/TWEET_ID.\n______\n" % (me.screen_name, me.followers_count, me.screen_name, FOLLOW_PRICE, RETWEET_PRICE)
 
 
 
@@ -29,7 +29,7 @@ def info():
 def follow(acct_name):
     
     res = api.create_friendship(acct_name)
-    return "%s was successfully followed by https://twitter.com/%s" % (acct_name, me.screen_name)
+    return "@%s was successfully followed by @%s" % (acct_name, me.screen_name)
 
 
 
@@ -38,15 +38,15 @@ def follow(acct_name):
 def retweet(tweet_id):
     
     res = api.retweet(tweet_id)
-    return "Successfully retweeted by https://twitter.com/%s" % me.screen_name
+    return "Successfully retweeted by @%s (https://twitter.com/%s)" % (me.screen_name, me.screen_name)
 
 
 
 if __name__ == '__main__':
     zt_ip = os.popen('/sbin/ifconfig zt0 | grep "inet\ addr" | cut -d: -f2 | cut -d" " -f1').read().strip()
     print("-----")
-    print("Server starting, to purchase a retweet from any 21BC1 use:")
-    print("21 buy --maxprice {price} url http://{ip}:{port}/retweet/TWEETID".format(
+    print("Server starting, to get info from any 21BC1 use:")
+    print("21 buy --maxprice {INFO_PRICE} url http://{ip}:{port}/info".format(
         price = RETWEET_PRICE,
         ip = zt_ip,
         port = SERVER_PORT
