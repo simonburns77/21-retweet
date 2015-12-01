@@ -52,4 +52,4 @@ if __name__ == '__main__':
         port = SERVER_PORT
     ))
     print("-----")
-    app.run(host=zt_ip, port=SERVER_PORT)
+    app.run(host='0.0.0.0', port=SERVER_PORT)
