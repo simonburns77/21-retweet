@@ -46,8 +46,8 @@ if __name__ == '__main__':
     zt_ip = os.popen('/sbin/ifconfig zt0 | grep "inet\ addr" | cut -d: -f2 | cut -d" " -f1').read().strip()
     print("-----")
     print("Server starting, to get info from any 21BC1 use:")
-    print("21 buy --maxprice {INFO_PRICE} url http://{ip}:{port}/info".format(
-        price = RETWEET_PRICE,
+    print("21 buy --maxprice {price} url http://{ip}:{port}/info".format(
+        price = INFO_PRICE,
         ip = zt_ip,
         port = SERVER_PORT
     ))
