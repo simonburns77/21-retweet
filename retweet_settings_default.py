@@ -9,3 +9,4 @@ SERVER_PORT = 5000
 INFO_PRICE = 10 # In satoshis
 FOLLOW_PRICE = 100 # In satoshis
 RETWEET_PRICE = 1000 # In satoshis
+FAVORITE_PRICE = 100 # In satoshis
