@@ -1,24 +1,24 @@
 # 21-retweet
 
-Sell retweets on Twitter using the 21 Bitcoin Computer.
+Sell retweets on Twitter using the [21](https://21.co/).
 
 ## Example
 
 You can see an example of this in action on [Twitter @21_retweet](https://twitter.com/21_retweet).
-To purchase a retweet on your 21BC use:
+To purchase a retweet with 21 use:
 
-*To use the example your 21BC1 must be connected the [21 Network](https://21.co/learn/introduction-to-the-21-bitcoin-computer/#join-the-peer-to-peer-network)*
+*To use the example you must have 21 installed and be connected to the [21 Network](https://21.co/learn/21-marketplace/)*
 ```
 21 buy --maxprice 1000 url http://21.justinguy.com/retweet/TWEETID
 ```
 
 ## Prerequisites
 
-- [21 Bitcoin Computer](https://21.co)
+- [21](https://21.co)
   - Flask (`sudo pip3 install flask`)
-  - Connected to the [21 Network](https://21.co/learn/introduction-to-the-21-bitcoin-computer/#join-the-peer-to-peer-network)
+  - Connected to the [21 Network](https://21.co/learn/21-marketplace/)
 
-## First setup of server (on the 21BC)
+## First setup of server
 
     cd ~
     sudo pip3 install tweepy
@@ -50,7 +50,7 @@ In order for the Tweepy library to interact with Twitter you need API access:
 When you start the server it will provide instructions for purchasing retweets from it. This is an example:
 ```
 -----
-Server starting, to purchase a retweet from any 21BC1 use:
+Server starting, to purchase a retweet run the following command:
 21 buy --maxprice 1000 url http://10.154.174.52:5000/retweet/TWEETID
 -----
  * Running on http://10.154.174.52:5000/ (Press CTRL+C to quit)
