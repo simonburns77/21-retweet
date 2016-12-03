@@ -1,0 +1,17 @@
+basePath: /
+host: '[fcce:a977:eed2:d19f:3438:0000:0000:0001]:6131'
+info:
+  title: '21 retweet'
+  contact: 
+    name: retweet
+    email: retweeter@pi.tw
+  description: 'You can purchase a follow by calling /follow/YOUR_TWITTER_HANDLE or a retweet for 1000 satoshi at /retweet/TWEET_ID or a favorite for 100 satoshi at /favorite/TWEET_ID.'
+  x-21-quick-buy: '21 buy http://[fcce:a977:eed2:d19f:3438:0000:0000:0001]/retweet/TWEETID'
+  x-21-category: utilities
+  x-21-app-image: "https://pbs.twimg.com/profile_images/668688525638807552/ybOq0M4A.jpg"
+  x-21-total-price: 
+  max: 300000
+  min: 10
+schemes: [http]
+swagger: '2.0'
+x-21-manifest-path: /manifest
